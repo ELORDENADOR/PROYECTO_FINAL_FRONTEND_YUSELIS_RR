@@ -19,7 +19,7 @@ const DentistasFavoritos = () => {
                     {item.email} <br/>
                     {item.phone} <br/>
                     {item.website} <br/>
-                    <button>Quitar</button>
+                    <button onClick={()=> dispatch({type: "BORRAR_DENTISTA_FAVORITO_SELECCIONADO",payload: item.id})} >Quitar</button>
                 </li>
             ))}
         </ul>

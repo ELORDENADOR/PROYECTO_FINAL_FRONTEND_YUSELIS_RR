@@ -34,6 +34,10 @@ case "LIMPIAR_LISTADO_DENTISTAS_FAVORITOS":
 case "CANTIDAD_DENTISTAS_FAVORITOS":     
         return {...state, arregloDentistasFavoritos: arregloDentistasFavoritos }
 
+case "BORRAR_DENTISTA_FAVORITO_SELECCIONADO":
+      let ArregloFiltradoDentistasFavoritos = state.arregloDentistasFavoritos.filter(item => item.id !== action.payload)
+      return {...state, arregloDentistasFavoritos: ArregloFiltradoDentistasFavoritos}        
+
          default:
             return state
     }
